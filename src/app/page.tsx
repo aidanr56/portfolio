@@ -1,22 +1,18 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-24">
-      <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 mb-4">
-        Hi, I'm Aidan
-      </h1>
-      <p className="text-lg text-zinc-600 mb-8">
-        I'm a developer and researcher. Here you'll find my projects and published papers.
-      </p>
-      <div className="flex gap-4">
-        <a href="/projects" className="text-zinc-900 font-medium underline underline-offset-4">
-          Projects
-        </a>
-        <a href="/papers" className="text-zinc-900 font-medium underline underline-offset-4">
-          Papers
-        </a>
-        <a href="/about" className="text-zinc-900 font-medium underline underline-offset-4">
-          About
-        </a>
+      <div className="mb-16">
+        <h1 className="text-4xl font-semibold tracking-tight text-zinc-900 mb-4">
+          Aidan Roche
+        </h1>
+        <p className="text-xl text-zinc-600 mb-6">
+          Machine Learning Engineer
+        </p>
+        <p className="text-zinc-600 leading-relaxed max-w-xl">
+          Welcome to my personal portfolio. Here you'll find my projects, research papers, and more about my work in machine learning and software development.
+        </p>
       </div>
     </main>
   );
