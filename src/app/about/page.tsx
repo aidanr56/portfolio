@@ -13,7 +13,7 @@ export default function About() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-lg font-medium text-zinc-900 mb-4">Skills & Tools</h2>
+        <h2 className="text-lg font-medium text-zinc-900 mb-6 underline underline-offset-4">Skills & Tools</h2>
         <div className="flex flex-wrap gap-2">
           {["Python", "PyTorch", "TensorFlow", "Git", "Machine Translation", "Natural Language Processing"].map((skill) => (
             <span
@@ -27,7 +27,7 @@ export default function About() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-lg font-medium text-zinc-900 mb-6">Education</h2>
+        <h2 className="text-lg font-medium text-zinc-900 mb-6 underline underline-offset-4">Education</h2>
         <div className="flex flex-col gap-6">
           <div>
             <div className="flex items-start justify-between gap-4 mb-1">
@@ -40,7 +40,7 @@ export default function About() {
       </section>
 
       <section className="mb-12">
-        <h2 className="text-lg font-medium text-zinc-900 mb-6">Work Experience</h2>
+        <h2 className="text-lg font-medium text-zinc-900 mb-6 underline underline-offset-4">Work Experience</h2>
         <div className="flex flex-col gap-6">
           <div>
             <div className="flex items-start justify-between gap-4 mb-1">
@@ -95,7 +95,7 @@ export default function About() {
       </section>
 
       <section>
-        <h2 className="text-lg font-medium text-zinc-900 mb-4">Contact</h2>
+        <h2 className="text-lg font-medium text-zinc-900 mb-4 underline underline-offset-4">Contact</h2>
         <div className="flex flex-col gap-2">
           <a
             href="mailto:aidan.james.roche@gmail.com"

@@ -9,7 +9,7 @@ export default function Projects() {
         Projects
       </h1>
       <p className="text-zinc-600 mb-12">
-        A selection of my work in machine learning and software development.
+        A selection of my work in both professional and academic contexts
       </p>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map((project) => (
