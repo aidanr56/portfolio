@@ -61,7 +61,7 @@ export default function Home() {
           className="p-6 border border-zinc-200 rounded-lg hover:border-zinc-400 transition-colors group"
         >
           <h2 className="text-zinc-900 font-medium mb-1 group-hover:underline">Papers &rarr;</h2>
-          <p className="text-sm text-zinc-500">Research and publications</p>
+          <p className="text-sm text-zinc-500">Written Works</p>
         </Link>
         <Link
           href="/about"

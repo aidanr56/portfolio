@@ -12,7 +12,7 @@ export default function Navbar() {
             Projects
           </Link>
           <Link href="/papers" className="text-zinc-600 hover:text-zinc-900 transition-colors">
-            Papers
+            Written Works
           </Link>
           <Link href="/about" className="text-zinc-600 hover:text-zinc-900 transition-colors">
             About

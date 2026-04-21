@@ -4,10 +4,10 @@ export default function Papers() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-24">
       <h1 className="text-3xl font-semibold tracking-tight text-zinc-900 mb-4">
-        Papers
+        Written Works
       </h1>
       <p className="text-zinc-600 mb-12">
-        Research and publications in machine learning.
+        Written pieces from University and more
       </p>
       <div className="flex flex-col divide-y divide-zinc-200">
         {papers.map((paper) => (
@@ -18,7 +18,6 @@ export default function Papers() {
             </div>
             <p className="text-sm text-zinc-500 mb-3">
               {paper.authors.join(", ")}
-              {paper.journal && ` — ${paper.journal}`}
             </p>
             <p className="text-sm text-zinc-600 leading-relaxed mb-4">
               {paper.abstract}
