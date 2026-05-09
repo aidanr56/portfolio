@@ -2,8 +2,9 @@ import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
+import { Playfair_Display, Inter } from 'next/font/google'
 
-const logo_pictures = "w-35 h-35 object-cover"
+const header_font = Playfair_Display({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -27,14 +28,13 @@ export default function Home() {
     </aside>
 
     <main className="max-w-4xl mx-auto px-6 py-6">
-      <div className="flex flex-col items-center mb-6">
-        <p className="font-mono text-center text-2xl text-zinc-800 leading-relaxed max-w-3xl mt-4">
+      <div className="flex flex-col items-center mb-2">
+        <p className="${header_font.className} font-mono text-center text-4xl text-zinc-800 leading-relaxed max-w-5xl mt-4" >
           Young developer with unique experience.
         </p>
-        <div className="w-50 h-px bg-gray-600 mt-4" />
       </div>
 
-      <div className="flex justify-center items-center gap-10 text-center text-2xl text-cyan-700 my-6">
+      <div className="flex justify-center items-center gap-10 text-center text-xl text-neutral-500">
         <div className="text-center">
           <p>Artficial<br />Intelligence</p>
         </div>
@@ -48,28 +48,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="flex justify-center gap-15 mb-6">
-        <div className="flex flex-col items-center text-center">
-          <img
-            src="/ucc_crest.jpg"
-            alt="Image of Aidan Roche"
-            className={logo_pictures}
-          />
-          <p className="text-zinc-1000">University College Cork</p>
-          <p className="text-xl text-zinc-600">Bachelor's Degree (Honors)</p>
-        </div>
-        <div className="flex flex-col items-center text-center">
-          <img
-            src="/Johnson_Controls.png"
-            alt="Image of Aidan Roche"
-            className={logo_pictures}
-          />
-          <p className="text-zinc-1000">Johnson Controls</p>
-          <p className="text-xl text-zinc-600">AI/ML Technology Intern</p>
-        </div>
+      <div className="flex flex-col items-center justify-center my-8">
+        <div className="w-3/4 h-px bg-gray-600" />
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 max-w-3xl">
         {projects.slice(0, 2).map((project) => (
           <ProjectCard key={project.slug} project={project} />
         ))}

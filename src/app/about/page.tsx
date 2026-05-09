@@ -1,3 +1,5 @@
+const logo_pictures = "w-35 h-35 object-cover"
+
 export default function About() {
   return (
     <main className="max-w-3xl mx-auto px-6 py-24">
@@ -11,6 +13,27 @@ export default function About() {
           I am a young professional, with a unique multi-disciplinary background in AI/ML, Computer Engineering, and Human Factors. I am looking to take the next step in my career, and am excited by the challenge of developing and implementing technology with a genuine impact. I have experience in Machine Translation, Human Factors, and AI implementation, and excel at bridging the gap between people and technology.
         </p>
       </section>
+
+            <div className="flex justify-center gap-15 mb-6">
+        <div className="flex flex-col items-center text-center">
+          <img
+            src="/ucc_crest.jpg"
+            alt="Image of Aidan Roche"
+            className={logo_pictures}
+          />
+          <p className="text-zinc-1000">University College Cork</p>
+          <p className="text-xl text-zinc-600">Bachelor's Degree (Honors)</p>
+        </div>
+        <div className="flex flex-col items-center text-center">
+          <img
+            src="/Johnson_Controls.png"
+            alt="Image of Aidan Roche"
+            className={logo_pictures}
+          />
+          <p className="text-zinc-1000">Johnson Controls</p>
+          <p className="text-xl text-zinc-600">AI/ML Technology Intern</p>
+        </div>
+      </div>
 
       <section className="mb-12">
         <h2 className="text-lg font-medium text-zinc-900 mb-6 underline underline-offset-4">Skills & Tools</h2>
