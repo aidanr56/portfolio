@@ -1,3 +1,14 @@
+{/* 
+Ideas for next time:
+
+-Get rid of the projects and paper on nav bar until I have more of them
+-Create a project and papers header and just put them on the home page
+-Get rid of the navigation tabs at the bottom (just comment out will ideally use in future, same for nav bar)
+-Add underline between home and about that shows which page your on
+-Clean up the about tab visually
+*/}
+
+
 import Link from "next/link";
 import Image from "next/image";
 import { projects } from "@/data/projects";
