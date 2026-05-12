@@ -14,12 +14,14 @@ import Image from "next/image";
 import { projects } from "@/data/projects";
 import ProjectCard from "@/components/ProjectCard";
 import { Playfair_Display, Inter } from 'next/font/google'
+import { papers } from "@/data/papers";
 
 const header_font = Playfair_Display({ subsets: ['latin'] })
 
 export default function Home() {
   return (
   <div className="flex min-h-screen">
+    
     <aside className="w-64 shrink-0 border-r border-gray-200 p-6 flex flex-col sticky top-0 h-screen">
         <div className="flex flex-col items-center text-center mb-5">
           <img
@@ -35,7 +37,6 @@ export default function Home() {
         <p className="text-xl text-zinc-600 mb-2">
           Psychology and Computer Science Graudate
         </p>
-
     </aside>
 
     <main className="max-w-4xl mx-auto px-6 py-6">
@@ -69,6 +70,46 @@ export default function Home() {
         ))}
       </div>
 
+      <div className="flex flex-col divide-y divide-zinc-200">
+        {papers.map((paper) => (
+          <div key={paper.slug} className="py-8">
+            <div className="flex items-start justify-between gap-4 mb-2">
+              <h2 className="text-zinc-900 font-medium">{paper.title}</h2>
+              <span className="text-sm text-zinc-500 shrink-0">{paper.year}</span>
+            </div>
+            <p className="text-sm text-zinc-500 mb-3">
+              {paper.authors.join(", ")}
+            </p>
+            <p className="text-sm text-zinc-600 leading-relaxed mb-4">
+              {paper.abstract}
+            </p>
+            <div className="flex gap-4">
+              {paper.pdfUrl && (
+                <a
+                  href={paper.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-zinc-900 font-medium underline underline-offset-4"
+                >
+                  View PDF
+                </a>
+              )}
+              {paper.externalUrl && (
+                <a
+                  href={paper.externalUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-zinc-900 font-medium underline underline-offset-4"
+                >
+                  View Paper
+                </a>
+              )}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/*
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-16">
         <Link
           href="/projects"
@@ -92,6 +133,7 @@ export default function Home() {
           <p className="text-sm text-zinc-500">Background and experience</p>
         </Link>
       </div>
+      */}
 
       <div className="flex flex-wrap gap-4 items-center justify-center">
         <a
