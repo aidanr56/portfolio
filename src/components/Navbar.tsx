@@ -69,7 +69,7 @@ export default function Navbar() {
           setBar({ left: pos.left, width: pos.width, opacity: 1, tx: 0, animated: true });
         }, 30);
         timersRef.current.push(t2);
-      }, 180);
+      }, 280);
       timersRef.current.push(t1);
     }
 
@@ -108,7 +108,7 @@ export default function Navbar() {
             width: bar.width,
             opacity: bar.opacity,
             transform: `translateX(${bar.tx}px)`,
-            transition: bar.animated ? "opacity 0.18s ease, transform 0.18s ease" : "none",
+            transition: bar.animated ? "opacity 0.28s ease, transform 0.28s ease" : "none",
           }}
         />
       </div>

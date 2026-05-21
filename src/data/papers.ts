@@ -26,4 +26,12 @@ export const papers: Paper[] = [
     year: 2023,
     pdfUrl: "/papers/Trait Theory in Human Behavior.pdf",
   },
+  {
+    slug: "Proposed Legal Framework for LLM's in Intellectual Property Law",
+    title: "Proposal for a Preliminary Legal Framework to Incorporate Generative AI into Irish Intellectual Property Law",
+    abstract: "This paper examines the legal ambiguities surrounding Large Language Model-generated content under existing Irish intellectual property legislation, identifying a gap in how copyright law handles non-human authorship. The paper proposes a preliminary framework for addressing this gap, proposing a standardized creativity test to determine whether AI-generated literary works qualify for copyright protection, and adapting the functional capacity test from the Assisted Decision-Making Act 2015 to assess whether an AI can be considered a legal decision-maker.",
+    authors: ["Aidan Roche"],
+    year: 2023,
+    pdfUrl: "/papers/Proposed Legal Framework for LLM's in Intellectual Property Law.pdf",
+  },
 ];
