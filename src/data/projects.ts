@@ -28,4 +28,12 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/aidanr56",
     imageUrl: "/images/project-two.jpg",
   },
+  {
+    slug: "portfolio-website",
+    title: "Personal Portfolio Website",
+    description: "I built this portfolio site from scratch to have a living space that reflects both my technical and creative sensibilities. The experience of building it — the design decisions, the tradeoffs, and the iteration — was itself a project worth documenting.",
+    reflection: "Designing for yourself is harder than designing for a client. Every choice is a statement about who you are, which makes every choice feel high-stakes. I learned to treat the site as a product: ship something coherent, then iterate. The constraint of a sidebar layout pushed me toward a structure that feels more like a document than a dashboard — and I think that suits the content.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "UI/UX Design"],
+    githubUrl: "https://github.com/aidanr56",
+  },
 ];

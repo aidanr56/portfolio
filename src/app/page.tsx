@@ -11,8 +11,7 @@ Ideas for next time:
 
 import Link from "next/link";
 import Image from "next/image";
-import { projects } from "@/data/projects";
-import ProjectCard from "@/components/ProjectCard";
+import ProjectCarousel from "@/components/ProjectCarousel";
 import { Playfair_Display, Inter } from 'next/font/google'
 import { papers } from "@/data/papers";
 import { Mail, Download } from "lucide-react";
@@ -63,11 +62,7 @@ export default function Home() {
 
         <h2 className={`${header_font.className} text-2xl text-zinc-800 tracking-wide text-center mb-6`}>Projects</h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8 max-w-3xl mx-auto">
-          {projects.slice(0, 2).map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
-        </div>
+        <ProjectCarousel />
 
         <h2 className={`${header_font.className} text-2xl text-zinc-800 tracking-wide text-center mt-6`}>Papers</h2>
 
