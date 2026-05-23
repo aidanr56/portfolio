@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects, Project } from '@/data/projects';
 
-const PEEK = 100;
+const PEEK = 110;
 const GAP = 16;
 const DURATION = 400;
 const AUTO_INTERVAL = 4000;
@@ -113,7 +113,7 @@ export default function ProjectCarousel() {
                   width: `${cardWidth}px`,
                   flexShrink: 0,
                   opacity: i === trackPos ? 1 : 0.45,
-                  transition: `opacity ${DURATION}ms ease-in-out`,
+                  transition: animated ? `opacity ${DURATION}ms ease-in-out` : 'none',
                 }}
               >
                 <CarouselCard project={project} />
@@ -153,15 +153,15 @@ function CarouselCard({ project }: { project: Project }) {
       href={`/projects/${project.slug}`}
       className="block border border-zinc-200 rounded-lg overflow-hidden hover:border-zinc-400 transition-colors group"
     >
-      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 aspect-video" />
-      <div className="p-6">
-        <h2 className="text-zinc-900 font-medium mb-2 group-hover:underline underline-offset-4">
+      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-64" />
+      <div className="p-6 h-60 overflow-hidden">
+        <h2 className="text-zinc-900 font-medium mb-2 group-hover:underline underline-offset-4 line-clamp-2">
           {project.title}
         </h2>
         <p className="text-sm text-zinc-600 mb-4">{project.description}</p>
         <div className="flex flex-wrap gap-2">
           {project.tags.map((tag) => (
-            <span key={tag} className="px-2 py-1 bg-zinc-100 text-zinc-600 text-xs rounded-md">
+            <span key={tag} className="px-2 py-1 bg-zinc-100 text-zinc-600 text-xs rounded-md line-clamp-2">
               {tag}
             </span>
           ))}

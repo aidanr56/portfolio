@@ -108,7 +108,7 @@ export default function Navbar() {
             width: bar.width,
             opacity: bar.opacity,
             transform: `translateX(${bar.tx}px)`,
-            transition: bar.animated ? "opacity 0.28s ease, transform 0.28s ease" : "none",
+            transition: bar.animated ? "opacity 0.20s ease, transform 0.20s ease" : "none",
           }}
         />
       </div>
