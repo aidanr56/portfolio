@@ -1,13 +1,14 @@
 'use client';
 
-import { useState, useRef, useLayoutEffect } from 'react';
+import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects, Project } from '@/data/projects';
 
-const PEEK = 70;
+const PEEK = 100;
 const GAP = 16;
-const DURATION = 350;
+const DURATION = 400;
+const AUTO_INTERVAL = 4000;
 
 export default function ProjectCarousel() {
   const n = projects.length;
@@ -19,8 +20,9 @@ export default function ProjectCarousel() {
   const [trackPos, setTrackPos] = useState(1);
   const [animated, setAnimated] = useState(false);
   const [containerWidth, setContainerWidth] = useState(0);
+  const [hovered, setHovered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const jumping = useRef(false);
+  const animating = useRef(false);
 
   useLayoutEffect(() => {
     const el = containerRef.current;
@@ -31,13 +33,26 @@ export default function ProjectCarousel() {
     return () => ro.disconnect();
   }, []);
 
+  useEffect(() => {
+    if (hovered) return;
+    const id = setInterval(() => {
+      if (!animating.current) {
+        animating.current = true;
+        setAnimated(true);
+        setTrackPos(p => p + 1);
+      }
+    }, AUTO_INTERVAL);
+    return () => clearInterval(id);
+  }, [hovered]);
+
   const cardWidth = Math.max(0, containerWidth - 2 * PEEK - 2 * GAP);
   const translateX = -(trackPos * (cardWidth + GAP)) + PEEK + GAP;
 
   const activeIndex = ((trackPos - 1) % n + n) % n;
 
   const go = (pos: number) => {
-    if (jumping.current) return;
+    if (animating.current) return;
+    animating.current = true;
     setAnimated(true);
     setTrackPos(pos);
   };
@@ -45,30 +60,31 @@ export default function ProjectCarousel() {
   const prev = () => go(trackPos - 1);
   const next = () => go(trackPos + 1);
 
-  const onTransitionEnd = () => {
+  const onTransitionEnd = (e: React.TransitionEvent) => {
+    if (e.propertyName !== 'transform') return;
     if (trackPos === 0) {
-      // landed on left clone → jump to real last
-      jumping.current = true;
       setAnimated(false);
       setTrackPos(n);
-      requestAnimationFrame(() => {
-        jumping.current = false;
-        setAnimated(true);
-      });
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        animating.current = false;
+      }));
     } else if (trackPos === n + 1) {
-      // landed on right clone → jump to real first
-      jumping.current = true;
       setAnimated(false);
       setTrackPos(1);
-      requestAnimationFrame(() => {
-        jumping.current = false;
-        setAnimated(true);
-      });
+      requestAnimationFrame(() => requestAnimationFrame(() => {
+        animating.current = false;
+      }));
+    } else {
+      animating.current = false;
     }
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto mb-8">
+    <div
+      className="w-full max-w-3xl mx-auto mb-8"
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+    >
       <div className="flex items-center gap-3">
         <button
           onClick={prev}
@@ -119,7 +135,7 @@ export default function ProjectCarousel() {
         {projects.map((_, i) => (
           <button
             key={i}
-            onClick={() => { setAnimated(true); setTrackPos(i + 1); }}
+            onClick={() => go(i + 1)}
             className={`h-1.5 rounded-full transition-all duration-300 ${
               i === activeIndex ? 'w-6 bg-zinc-700' : 'w-1.5 bg-zinc-300 hover:bg-zinc-400'
             }`}
@@ -137,7 +153,7 @@ function CarouselCard({ project }: { project: Project }) {
       href={`/projects/${project.slug}`}
       className="block border border-zinc-200 rounded-lg overflow-hidden hover:border-zinc-400 transition-colors group"
     >
-      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-48" />
+      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 aspect-video" />
       <div className="p-6">
         <h2 className="text-zinc-900 font-medium mb-2 group-hover:underline underline-offset-4">
           {project.title}
