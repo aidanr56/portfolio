@@ -2,6 +2,7 @@
 
 import { useState, useRef, useLayoutEffect, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { projects, Project } from '@/data/projects';
 
@@ -153,7 +154,13 @@ function CarouselCard({ project }: { project: Project }) {
       href={`/projects/${project.slug}`}
       className="block border border-zinc-200 rounded-lg overflow-hidden hover:border-zinc-400 transition-colors group"
     >
-      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-64" />
+      {project.imageUrl ? (
+        <div className="relative h-64">
+          <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
+        </div>
+      ) : (
+        <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-64" />
+      )}
       <div className="p-6 h-60 overflow-hidden">
         <h2 className="text-zinc-900 font-medium mb-2 group-hover:underline underline-offset-4 line-clamp-2">
           {project.title}

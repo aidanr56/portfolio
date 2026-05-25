@@ -17,7 +17,7 @@ export const projects: Project[] = [
     reflection: "A later reflection on the project — what you learned, what you would do differently, and how it shaped your thinking.",
     tags: ["JavaScript", "AI Ethics", "Gamification", "Conversational Learning"],
     githubUrl: "https://github.com/aidanr56",
-    imageUrl: "/images/project-one.jpg",
+    imageUrl: "/images/Senior-Dissertation-Image.png",
   },
   {
     slug: "machine-translation-tool",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     reflection: "A later reflection on the project — what you learned, what you would do differently, and how it shaped your thinking.",
     tags: ["TensorFlow", "NLP", "Python", "Machine Translation", "Neural Networks"],
     githubUrl: "https://github.com/aidanr56",
-    imageUrl: "/images/project-two.jpg",
+    imageUrl: "/images/Machine-Translation-Tool-Image.png",
   },
   {
     slug: "portfolio-website",
@@ -35,5 +35,6 @@ export const projects: Project[] = [
     reflection: "Designing for yourself is harder than designing for a client. Every choice is a statement about who you are, which makes every choice feel high-stakes. I learned to treat the site as a product: ship something coherent, then iterate. The constraint of a sidebar layout pushed me toward a structure that feels more like a document than a dashboard — and I think that suits the content.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "UI/UX Design"],
     githubUrl: "https://github.com/aidanr56",
+    imageUrl: "/images/Portfolio-Website-Image.png",
   },
 ];

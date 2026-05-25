@@ -62,8 +62,8 @@ export default function About() {
 
       {/* Bio */}
       <section className="mb-12">
-        <p className="text-zinc-600 leading-relaxed">
-          I am a young professional with a unique multi-disciplinary background in AI/ML, Computer Engineering, and Human Factors. I am looking to take the next step in my career, excited by the challenge of developing and implementing technology with genuine impact. I have experience in Machine Translation, Human Factors, and AI implementation, and excel at bridging the gap between people and technology.
+        <p className="text-zinc-700 leading-relaxed">
+          I excel at analyzing complex problems between people and technology, and creating solutions with genuine impact. With a Bachelor's Degree in Psychology & Computer Science and experience spanning Machine Learning, Computer Engineering, and Human Factors Engineering, I bring an unique perspective to AI development. At Johnson Controls, I led a team that developed and deployed a novel NLP system for evaluating machine translation quality, placing in the top 10% of ~1,000 teams in a global internal competition. I will continue to develop my skills in the AI/ML space, and hope to do so at a place where the challenges are unique, and creativity is rewarded.
         </p>
       </section>
 
@@ -101,6 +101,9 @@ export default function About() {
             <div>
               <h3 className="text-zinc-900 font-medium">BA (Hons) Psychology & Computer Science</h3>
               <p className="text-sm text-zinc-500 mt-1">University College Cork</p>
+              <p className="text-sm text-zinc-500 mt-1 font-semibold">
+                Degree Results: 4.0 GPA (First Class Honors)
+              </p>
             </div>
             <span className="text-sm text-zinc-400 shrink-0">2021 — 2024</span>
           </div>

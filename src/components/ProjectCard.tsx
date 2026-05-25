@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Project } from "@/data/projects";
 
 export default function ProjectCard({ project }: { project: Project }) {
@@ -7,7 +8,13 @@ export default function ProjectCard({ project }: { project: Project }) {
       href={`/projects/${project.slug}`}
       className="border border-zinc-200 rounded-lg overflow-hidden hover:border-zinc-400 transition-colors group"
     >
-      <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-48" />
+      {project.imageUrl ? (
+        <div className="relative h-48">
+          <Image src={project.imageUrl} alt={project.title} fill className="object-cover" />
+        </div>
+      ) : (
+        <div className="bg-gradient-to-br from-zinc-100 to-zinc-200 h-48" />
+      )}
       <div className="p-6">
         <h2 className="text-zinc-900 font-medium mb-2 group-hover:underline underline-offset-4">
           {project.title}
