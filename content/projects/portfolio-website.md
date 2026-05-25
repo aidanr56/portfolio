@@ -2,7 +2,7 @@
 title: Personal Portfolio Website
 tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "UI/UX Design"]
 githubUrl: "https://github.com/aidanr56/portfolio"
-imageUrl: "/images/Portfolio-Website-Image.png"
+imageUrl: "/images/Portfolio-Image.png"
 ---
 
 ## Overview

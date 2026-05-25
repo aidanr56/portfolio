@@ -35,6 +35,6 @@ export const projects: Project[] = [
     reflection: "Designing for yourself is harder than designing for a client. Every choice is a statement about who you are, which makes every choice feel high-stakes. I learned to treat the site as a product: ship something coherent, then iterate. The constraint of a sidebar layout pushed me toward a structure that feels more like a document than a dashboard — and I think that suits the content.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "UI/UX Design"],
     githubUrl: "https://github.com/aidanr56",
-    imageUrl: "/images/Portfolio-Website-Image.png",
+    imageUrl: "/images/Portfolio-Image.png",
   },
 ];
