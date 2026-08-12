@@ -116,6 +116,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
             View on GitHub
           </a>
         )}
+
         {data.liveUrl && (
           <a
             href={data.liveUrl}

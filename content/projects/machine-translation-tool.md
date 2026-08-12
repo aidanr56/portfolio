@@ -1,7 +1,6 @@
 ---
 title: Machine Translation Evaluator and Training Tool
 tags: ["TensorFlow", "NLP", "Python", "Machine Translation", "Neural Networks"]
-githubUrl: "https://github.com/aidanr56"
 imageUrl: "/images/Machine-Translation-Tool-Image.png"
 ---
 
