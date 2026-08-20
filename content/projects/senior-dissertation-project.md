@@ -4,35 +4,62 @@ tags: ["JavaScript", "AI Ethics", "Gamification", "Conversational Learning"]
 githubUrl: "https://github.com/aidanr56/aidanr56.github.io/tree/main"
 liveUrl: "https://aidanr56.github.io"
 imageUrl: "/images/Senior-Dissertation-Image.png"
+skills:
+  - name: Research through Design (RtD)
+    blurb: Treating the design process itself as a way of understanding a problem space.
+    summary: >-
+      A key aspect of this project is the application of RtD as a research
+      approach (this concept was first proposed here by Christopher Frayling). A
+      core idea of this is that the outcome of a study is not necessarily the
+      product, but the knowledge. It illustrates the idea that design is a form of
+      research, in and of itself, and that through the process of design we can
+      learn and understand a problem space.
+  - name: Web Development
+    blurb: My first large JavaScript project, from module bundling to deployment.
+    summary: >-
+      This project, at the time, was the most complex web development task I had
+      approached. I had to learn a huge amount of JavaScript, I was previously
+      more familiar with Python, and began to understand some of the more complex
+      logistics of deploying a project online, such as bundling and compiling JS
+      modules. See the “Technical Details” section below for more information.
+  - name: User Evaluation and Iteration
+    blurb: Combining interviews and surveys to test an idea against real users.
+    summary: >-
+      A requirement for this project was that we not only build a working
+      prototype of our idea, but that we actually use that to work with potential
+      users to test our idea: are digital education games a useful pedagogy for AI
+      education? We decided on a combination of qualitative and quantitative data,
+      from interviews and surveys respectively. This provided us not only with the
+      statistical data to answer the question of its usefulness, but also taught me
+      to read qualitative data to find design flaws in the user experience.
 ---
 
 ## Overview
 
-This project is a single-player, browser-based education game I designed and built from scratch as the centrepiece of my undergraduate senior thesis at University College Cork. The game was built with a team of four, with myself as the core developer and my focus on AI ethics. The game takes players on an explorable island adventure where they meet characters who teach them about AI literacy, explainable AI, and the ethics of AI through dynamic, choice-driven conversations. Rather than passively reading about these issues, players actively engage with them — making decisions and receiving tailored feedback in real time.
+This project is a single-player, web-based education game I designed and built from scratch as the centrepiece of my undergraduate senior thesis at University College Cork. The entire project was completed as a team of four people, but we each had our own focus and wrote independent thesis. For those interested in this project, I highly recommend reading at least the introduction section of [the thesis](/papers/Senior%20Thesis.pdf), as it will provide a far more detailed explanation of the reasoning behind the work and the methodology applied. Below is a quote for the beginning of the “Methods” section to better explain this project's objectives.
 
-## The Problem
-
-AI ethics is a growing and critically important field, yet public understanding of it remains limited, and pedagogical approaches to its teaching are largely unexplored. Most existing education tools are either text-heavy documents or classroom-based group activities. There was a clear gap for something that could engage an individual learner on their own, while still delivering meaningful educational content and fostering critical thinking.
+> “This study had two objectives: explore the potential of gamification as a pedagogy in teaching AI ethics, and evaluate [Research through Design (RtD)] as a methodology in AI ethics education research. This paper is part of a larger research project, consisting of four studies, that aims to evaluate gamification as a pedagogy for fostering AI literacy. The four studies were divided between development and evaluation, with two studies focused on each. This present paper falls into the former category, and applies a RtD approach to the development of a digital education game. This game was designed to teach players about ethics of AI, explainable AI, and data literacy; however, this paper is focused specifically on ethics of AI. The theoretical framework behind this paper is that by applying a RtD approach to the development of a digital education game that teaches AI ethics, the developers would be able to learn about the intricacies of the problem space, and gain valuable information regarding how gamification could be used to teach AI ethics. Since there is currently minimal research on the use of RtD in the field of AI ethics education this paper also provides a reflective evaluation on the implications of using this methodology.”
 
 ## What I Built
 
 The game is a 2D top-down RPG-style web app inspired by Pokémon, built entirely for desktop browsers. The player controls a character sprite that can freely explore a custom-designed island map. Scattered across the island are a number of non-playable characters (NPCs), each specialising in a different AI ethics topic. When a player approaches an NPC, they can initiate a text-based dialogue interaction through a multiple-choice system.
 
-The core mechanic works like this: the NPC presents an ethical scenario or concept, then asks the player a question. The player picks from several response options, and NPCs have variable dialogue dependent on player choices. This allows players to freely explore their own ideas on the subject while receiving feedback and new perspectives to deepen their understanding — creating a conversational feedback loop that pushes players to genuinely reflect rather than just read.
+The core mechanic works like this: the NPC presents an ethical scenario or concept, then asks the player a question. The player picks from several response options, and the NPC's have variable dialogue dependent on player choices. This allows players to freely explore their own ideas on the subject, while receiving feedback and new perspectives to deepen their understanding. This creates a conversational feedback loop that pushes players to genuinely reflect rather than just read. An XP (experience points) system tracks performance across three subject areas, AI Ethics, Explainable AI, and Data Literacy, displayed as progress bars in the corner of the screen.
+
 
 An XP system tracks performance across three subject areas — **AI Ethics**, **Explainable AI**, and **Data Literacy** — displayed as progress bars in the corner of the screen.
 
 ## Technical Details
 
-**Language & Framework:** JavaScript (ES6) with the PixiJS framework. PixiJS was chosen specifically for its strengths in 2D web rendering, sprite management, and handling user input — it greatly simplified building the game window, the map, and the interactive elements.
+**Language & Framework:** JavaScript (ES6) with the PixiJS framework. PixiJS was chosen specifically for its strengths in 2D web rendering, sprite management, and handling user input. It greatly simplified building the game window, the map, and the interactive elements.
 
-**Module Architecture:** The game is built around JavaScript's module system. Each major system — the NPC logic, the interaction/dialogue display, and the app window state — lives in its own module file (`NPC.js`, `interaction.js`, `AppInfo.js`). These are imported into a central `main.js` file that orchestrates the game loop.
+**Module Architecture:** The game is built around JavaScript's module system. Each major system, the NPC logic, the interaction/dialogue display, and the app window state, lives in its own module file (NPC.js, interaction.js, AppInfo.js). These are imported into a central main.js file that handles the actual game loop.
 
 **Bundling:** Webpack was used to bundle and compile all JS modules and their dependencies into a single output file. This reduced the number of server requests on page load and significantly improved load times.
 
-**Map & Movement:** The island map was custom designed. Player movement is achieved by translating the map behind a stationary player sprite, creating a smooth illusion of exploration. NPCs are anchored to fixed map coordinates and move with the map. Euclidean distance calculations detect when a player is close enough to trigger an interaction prompt. Invisible bounding boxes define the walkable areas of the game, preventing players from walking off the map or through trees and houses.
+**Map & Movement:** The island map was custom designed. Player movement is achieved by moving the map behind a stationary player sprite, creating a smooth illusion of “movement”. NPCs are anchored to fixed map coordinates and move with the map. Euclidean distance calculations detect when a player is close enough to trigger an interaction prompt. Invisible bounding boxes are used to define the walkable areas of the game, and prevent players from walking off the map or through trees and houses (the collision system proved to be surprisingly challenging).
 
-**Dialogue System:** Each NPC has its own script file containing all dialogue text and branching response options. `NPC.js` extracts and renders the appropriate dialogue based on player choices. The `interaction.js` module handles the dialogue text box — dynamically sizing and positioning it based on the user's window dimensions, and paginating long text into sections the player can scroll through.
+**Dialogue System:** Each NPC has its own script file containing all dialogue text and branching response options. `NPC.js` extracts and renders the appropriate dialogue based on player choices. The `interaction.js` module handles the dialogue text box by dynamically sizing and positioning it based on the user's window dimensions, and paginating long text into sections the player can scroll through.
 
 **Hosting:** The game is deployed as a static site via GitHub Pages.
 

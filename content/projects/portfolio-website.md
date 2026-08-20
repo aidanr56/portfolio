@@ -3,25 +3,48 @@ title: Personal Portfolio Website
 tags: ["Next.js", "TypeScript", "Tailwind CSS", "React", "UI/UX Design"]
 githubUrl: "https://github.com/aidanr56/portfolio"
 imageUrl: "/images/Portfolio-Image.png"
+skills:
+  - name: React and TypeScript
+    blurb: Learning both from scratch to build and quickly extend this site.
+    summary: >-
+      This site is built using the React framework, and is written largely in
+      TypeScript. I previously had little to no experience with these tools, and
+      this project gave me the chance to explore these tools without constraint.
+      While this made the start of the project a bit slower due to the learning
+      curve, the result is the ability to quickly modify my own site, and create
+      entirely new pages at a much higher speed and quality.
+  - name: Open-Ended Design
+    blurb: Designing something that represents me, with no brief and no oversight.
+    summary: >-
+      When I began this project it was the first I had done completely of my own
+      accord, with no school or company oversight. It was also not a site intended
+      to host a functional tool, rather, the site itself was the end-goal. These
+      minimal constraints created a new challenge, that of staring at an empty
+      white web-page and a blank VS Code file and trying to design something that
+      represented myself.
+  - name: Working with AI
+    blurb: Finding where Claude Code genuinely helps, and where it gets in the way.
+    summary: >-
+      Part of what I wanted to do when I began this project was learn how to
+      better utilize AI tools, specifically Claude Code. This was the first time I
+      had used a tool that lived in my terminal and saw my entire code base. My key
+      takeaway is that it is most valuable for teaching and formatting, but can
+      struggle with bringing a design to life and can quickly lead to problems with
+      scaling. In the end, I came up with the entire visual design of this site
+      myself, but used Claude to help implement details such as the animation of
+      the underline between the ‘Home’ and ‘About’ page.
 ---
 
 ## Overview
 
-My personal portfolio website is a custom-designed and custom-built site that serves as a living showcase of my technical projects and writing. Rather than reaching for a template or site builder, I built the entire thing from scratch — treating it as a product in its own right, with the same care I'd bring to any professional software project.
+My personal portfolio website is a custom-designed and custom-built site that serves as a living showcase of my technical projects and writing. Rather than reaching for a template or site builder, I built the entire thing from scratch. Treating it as a product in its own right, with the same care I'd bring to any professional software project.
 
 The site is built with Next.js (App Router), TypeScript, React, and Tailwind CSS v4. It includes a home page, an about page, a projects listing page, individual project detail pages, and a papers page.
 
-## The Problem
-
-Most developer portfolios are either over-designed showcases or bare-bones GitHub README dumps. I wanted something in between: a site that felt intentional and personal, reflected both my technical and creative sensibilities, and could grow with me over time. Building from a template would have meant inheriting someone else's design decisions. Building from scratch meant every choice was mine to make — and own.
-
-## What I Built
-
-The site has several interconnected pieces, each with its own interesting implementation challenge.
 
 ### Home Page & Custom Carousel
 
-The home page features a project carousel I built entirely from scratch — no carousel library. It supports smooth infinite-loop animation, auto-play, and a "peek" effect that shows the edges of adjacent cards to signal there is more content to scroll through. Getting the infinite loop to feel seamless required careful index management and CSS transition handling to avoid any flash or jump when the virtual index wraps around.
+The home page features a project carousel I built entirely from scratch (no carousel library). It supports smooth infinite-loop animation, auto-play, and a "peek" effect that shows the edges of adjacent cards to signal there is more content to scroll through. Getting the infinite loop to feel seamless required careful index management and CSS transition handling to avoid any flash or jump when the virtual index wraps around.
 
 ### Projects Page & Detail Pages
 
@@ -29,7 +52,7 @@ The projects page renders a responsive grid of project cards, each linking to a 
 
 ### Markdown-Based Content System
 
-Each project's content lives in its own `.md` file, with YAML frontmatter for structured metadata (title, tags, links, etc.) and a Markdown body for the main write-up. The content is parsed using `gray-matter` and rendered with `react-markdown`. Rather than accepting the default HTML output, I mapped every Markdown element — headings, paragraphs, lists, code blocks, links — to fully custom Tailwind-styled React components, giving precise visual control over how each element renders without fighting against a global stylesheet.
+Each project's content lives in its own `.md` file, with YAML frontmatter for structured metadata (title, tags, links, etc.) and a Markdown body for the main write-up. The content is parsed using `gray-matter` and rendered with `react-markdown`. Rather than accepting the default HTML output, I mapped every Markdown element, headings, paragraphs, lists, code blocks, links, to fully custom Tailwind-styled React components, giving precise visual control over how each element renders without fighting against a global stylesheet.
 
 ### Navigation
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Mail, Download } from "lucide-react";
 
 const skillGroups = [
@@ -45,46 +46,30 @@ const experience = [
   },
 ];
 
+const EMPLOYAGILITY_URL = "https://www.ucc.ie/en/careers/areyouacurrentstudent/getexperience/awards/";
+
 export default function About() {
   return (
     <div className="flex flex-col min-h-screen">
     <main className="max-w-3xl mx-auto px-6 py-12 flex-1">
       {/* Hero */}
-      <div className="flex items-center gap-6 mb-8">
-        <div className="w-16 h-16 rounded-full bg-zinc-900 flex items-center justify-center shrink-0">
-          <span className="text-white font-semibold text-lg tracking-tight">AR</span>
-        </div>
+      <div className="flex flex-col sm:flex-row items-start gap-8 mb-12">
+        <Image
+          src="/about_picture.jpg"
+          alt="Aidan Roche"
+          width={576}
+          height={432}
+          priority
+          className="w-full sm:w-56 shrink-0 rounded-lg object-cover"
+        />
         <div>
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">Aidan Roche</h1>
           <p className="text-zinc-500 mt-1">Psychology & Computer Science · AI/ML · Human Factors</p>
+          <p className="text-zinc-700 leading-relaxed mt-4">
+            I excel at analyzing complex problems between people and technology, and creating solutions with genuine impact. With a Bachelor's Degree in Psychology & Computer Science and experience spanning Machine Learning, Computer Engineering, and Human Factors Engineering, I bring an unique perspective to modern problems.
+          </p>
         </div>
       </div>
-
-      {/* Bio */}
-      <section className="mb-12">
-        <p className="text-zinc-700 leading-relaxed">
-          I excel at analyzing complex problems between people and technology, and creating solutions with genuine impact. With a Bachelor's Degree in Psychology & Computer Science and experience spanning Machine Learning, Computer Engineering, and Human Factors Engineering, I bring an unique perspective to AI development. At Johnson Controls, I led a team that developed and deployed a novel NLP system for evaluating machine translation quality, placing in the top 10% of ~1,000 teams in a global internal competition. I will continue to develop my skills in the AI/ML space, and hope to do so at a place where the challenges are unique, and creativity is rewarded.
-        </p>
-      </section>
-
-      <hr className="border-zinc-100 mb-12" />
-
-      {/* Skills */}
-      <section className="mb-12">
-        <h2 className="text-lg font-medium text-zinc-900 mb-6">Skills & Tools</h2>
-        <div className="flex flex-col gap-4">
-          {skillGroups.map(({ label, skills }) => (
-            <div key={label} className="flex flex-wrap items-center gap-2">
-              <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide w-24 shrink-0">{label}</span>
-              {skills.map((skill) => (
-                <span key={skill} className="px-3 py-1 bg-zinc-100 text-zinc-700 text-sm rounded-md">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          ))}
-        </div>
-      </section>
 
       <hr className="border-zinc-100 mb-12" />
 
@@ -108,6 +93,59 @@ export default function About() {
             <span className="text-sm text-zinc-400 shrink-0">2021 — 2024</span>
           </div>
         </div>
+      </section>
+
+      <hr className="border-zinc-100 mb-12" />
+
+      {/* Skills */}
+      <section className="mb-12">
+        <h2 className="text-lg font-medium text-zinc-900 mb-6">Skills & Tools</h2>
+        <div className="flex flex-col gap-4">
+          {skillGroups.map(({ label, skills }) => (
+            <div key={label} className="flex flex-wrap items-center gap-2">
+              <span className="text-xs font-medium text-zinc-400 uppercase tracking-wide w-24 shrink-0">{label}</span>
+              {skills.map((skill) => (
+                <span key={skill} className="px-3 py-1 bg-zinc-100 text-zinc-700 text-sm rounded-md">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <hr className="border-zinc-100 mb-12" />
+
+      {/* Achievements */}
+      <section className="mb-12">
+        <h2 className="text-lg font-medium text-zinc-900 mb-6">Achievements</h2>
+        <ul className="flex flex-col gap-3">
+          <li className="flex items-center gap-3 text-sm text-zinc-600 leading-relaxed">
+            <span className="w-4 h-px bg-zinc-300 shrink-0" />
+            <span>
+              Recipient of the University College Cork (UCC){" "}
+              <a
+                href={EMPLOYAGILITY_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-zinc-900 underline underline-offset-4 hover:text-zinc-500 transition-colors"
+              >
+                EmployAgility
+              </a>{" "}
+              award.
+            </span>
+          </li>
+          <li className="flex items-center gap-3 text-sm text-zinc-600 leading-relaxed">
+            <span className="w-4 h-px bg-zinc-300 shrink-0" />
+            <span>Ranked 10th in Ireland for Men&apos;s Foil Fencing.</span>
+          </li>
+          <li className="flex items-center gap-3 text-sm text-zinc-600 leading-relaxed">
+            <span className="w-4 h-px bg-zinc-300 shrink-0" />
+            <span>
+              Member of my Middle &amp; High School Robotics team for 7 years, and Captain during my last year.
+            </span>
+          </li>
+        </ul>
       </section>
 
       <hr className="border-zinc-100 mb-12" />
@@ -141,6 +179,8 @@ export default function About() {
           </div>
         </div>
       </section>
+
+
 
     </main>
 

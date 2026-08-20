@@ -2,6 +2,39 @@
 title: Machine Translation Evaluator and Training Tool
 tags: ["TensorFlow", "NLP", "Python", "Machine Translation", "Neural Networks"]
 imageUrl: "/images/Machine-Translation-Tool-Image.png"
+skills:
+  - name: Natural Language Processing
+    blurb: Preparing training data and using vectorization to measure meaning across languages.
+    summary: >-
+      The two primary goals for this project were to create a better way to
+      evaluate the quality of translations, and to synthesize language data to
+      support low-resource languages. Both of these are language intensive tasks
+      that require not only the understanding of how Neural Networks interpret
+      linguistic data, but also how we can use state of the art NLP approaches to
+      “measure” meaning across languages. Two key skills I learned were how to
+      prepare and clean data for training, and various approaches to language
+      vectorization.
+  - name: Data Challenges with Neural Networks
+    blurb: Researching how the quality of training data shapes what a model can do.
+    summary: >-
+      I initially began this project with the purpose of improving Machine
+      Translation Engines for low-resource languages. This led to many weeks of
+      reading academic and industry publications to understand the various
+      approaches to this problem, some applied and many still theoretical. This is
+      where I found my focus on high-quality data, and wanted to test the theory
+      that if a model's output is good enough that it could be used to train
+      future iterations of itself.
+  - name: Deploying AI Tools
+    blurb: Serving models through a Flask app and Azure to demo a working prototype.
+    summary: >-
+      This project was entered into Johnson Control’s internal innovation
+      competition, where I led a team of 4 to evaluate the business impact of the
+      tool and demonstrate a prototype. We made it to the top 10% of ~1,000 teams,
+      and we received positive feedback regarding our prototype. I wanted a tool
+      that could actually be used live in a demo, so I learned how to deploy AI
+      models using the Flask framework for Python web development. I also began
+      the process of creating an Azure Function App to deploy the tool for
+      internal use.
 ---
 
 > **Note:** This project was developed as an internal tool during my internship at Johnson Controls. In accordance with my non-disclosure agreement, source code, screenshots, and certain implementation details are omitted from this write-up.
