@@ -5,7 +5,8 @@ import { Mail, Download } from "lucide-react";
 const skillGroups = [
   { label: "Languages", skills: ["Python", "JavaScript", "TypeScript"] },
   { label: "Frameworks", skills: ["PyTorch", "TensorFlow", "Git"] },
-  { label: "Domains", skills: ["Machine Translation", "Natural Language Processing", "AI Ethics", "Human Factors"] },
+  { label: "Domains", skills: ["Machine Translation", "Natural Language Processing", "AI Ethics"] },
+  { label: "Design", skills: ["Human Factors", "User Experience & Interface Design",  "Usability Testing"]},
 ];
 
 const experience = [
@@ -23,12 +24,13 @@ const experience = [
     org: "Johnson Controls",
     dates: "Oct 2024 — May 2025",
     bullets: [
-      "Developed and began deployment for a novel AI system that leveraged advanced NLP vectorization techniques to measure the quality of MT systems and synthesize high-quality data to support MT Engines for low-resource languages.",
-      "Led a cross-functional team to build and evaluate the business impact of the system in an internal competition, resulting in top 10% placement of ~1,000 teams.",
+      "Led development of AI translation tool to evaluate and synthesize data, also worked on user testing and implementation of RAG LLM",
+      "Developed AI ethics framework to classify technical documentation risk to guide use for AI translations",
+      "Applied structured, criteria-based evaluation methods to assess data quality and compliance with technical standards"
     ],
   },
   {
-    title: "Lecturer Assistant — Python",
+    title: "Teaching Assistant — Python",
     org: "University College Cork",
     dates: "Feb 2022 — Apr 2024",
     bullets: [
@@ -64,7 +66,15 @@ export default function About() {
         />
         <div>
           <h1 className="text-3xl font-semibold tracking-tight text-zinc-900">Aidan Roche</h1>
-          <p className="text-zinc-500 mt-1">Psychology & Computer Science · AI/ML · Human Factors</p>
+          <p className="text-base text-zinc-500">
+            <a
+              href="mailto:aidan.james.roche@gmail.com"
+              className="select-all underline underline-offset-4 decoration-zinc-300 hover:text-zinc-900 transition-colors"
+            >
+              aidan.james.roche@gmail.com
+            </a>
+          </p>
+          <p className="text-zinc-500 mt-3 font-bold">Designer · Developer · Innovator</p>
           <p className="text-zinc-700 leading-relaxed mt-4">
             I excel at analyzing complex problems between people and technology, and creating solutions with genuine impact. With a Bachelor's Degree in Psychology & Computer Science and experience spanning Machine Learning, Computer Engineering, and Human Factors Engineering, I bring an unique perspective to modern problems.
           </p>

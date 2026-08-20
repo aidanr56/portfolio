@@ -9,7 +9,7 @@ skills:
     blurb: Treating the design process itself as a way of understanding a problem space.
     summary: >-
       A key aspect of this project is the application of RtD as a research
-      approach (this concept was first proposed here by Christopher Frayling). A
+      approach (a concept first proposed by Christopher Frayling). A
       core idea of this is that the outcome of a study is not necessarily the
       product, but the knowledge. It illustrates the idea that design is a form of
       research, in and of itself, and that through the process of design we can
@@ -36,7 +36,7 @@ skills:
 
 ## Overview
 
-This project is a single-player, web-based education game I designed and built from scratch as the centrepiece of my undergraduate senior thesis at University College Cork. The entire project was completed as a team of four people, but we each had our own focus and wrote independent thesis. For those interested in this project, I highly recommend reading at least the introduction section of [the thesis](/papers/Senior%20Thesis.pdf), as it will provide a far more detailed explanation of the reasoning behind the work and the methodology applied. Below is a quote for the beginning of the “Methods” section to better explain this project's objectives.
+This project is a single-player, web-based education game I designed and built from scratch as the centrepiece of my undergraduate senior thesis at University College Cork. The entire project was completed as a team of four people, but we each had our own focus and wrote independent thesis. For those interested in this project, I highly recommend reading at least the introduction section of [my thesis](/papers/Senior%20Thesis.pdf), as it will provide a far more detailed explanation of the reasoning behind the work and the methodology applied. Below is a quote from the beginning of the “Methods” section, from my thesis, to better explain this project's objectives.
 
 > “This study had two objectives: explore the potential of gamification as a pedagogy in teaching AI ethics, and evaluate [Research through Design (RtD)] as a methodology in AI ethics education research. This paper is part of a larger research project, consisting of four studies, that aims to evaluate gamification as a pedagogy for fostering AI literacy. The four studies were divided between development and evaluation, with two studies focused on each. This present paper falls into the former category, and applies a RtD approach to the development of a digital education game. This game was designed to teach players about ethics of AI, explainable AI, and data literacy; however, this paper is focused specifically on ethics of AI. The theoretical framework behind this paper is that by applying a RtD approach to the development of a digital education game that teaches AI ethics, the developers would be able to learn about the intricacies of the problem space, and gain valuable information regarding how gamification could be used to teach AI ethics. Since there is currently minimal research on the use of RtD in the field of AI ethics education this paper also provides a reflective evaluation on the implications of using this methodology.”
 

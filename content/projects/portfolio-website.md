@@ -5,7 +5,7 @@ githubUrl: "https://github.com/aidanr56/portfolio"
 imageUrl: "/images/Portfolio-Image.png"
 skills:
   - name: React and TypeScript
-    blurb: Learning both from scratch to build and quickly extend this site.
+    blurb: Learning new tools that allow faster and higher quality development.
     summary: >-
       This site is built using the React framework, and is written largely in
       TypeScript. I previously had little to no experience with these tools, and
@@ -14,7 +14,7 @@ skills:
       curve, the result is the ability to quickly modify my own site, and create
       entirely new pages at a much higher speed and quality.
   - name: Open-Ended Design
-    blurb: Designing something that represents me, with no brief and no oversight.
+    blurb: Designing something that represents me, with no constraints and no oversight.
     summary: >-
       When I began this project it was the first I had done completely of my own
       accord, with no school or company oversight. It was also not a site intended
@@ -23,7 +23,7 @@ skills:
       white web-page and a blank VS Code file and trying to design something that
       represented myself.
   - name: Working with AI
-    blurb: Finding where Claude Code genuinely helps, and where it gets in the way.
+    blurb: Finding where AI genuinely helps, and where it gets in the way.
     summary: >-
       Part of what I wanted to do when I began this project was learn how to
       better utilize AI tools, specifically Claude Code. This was the first time I

@@ -178,6 +178,15 @@ export default function Home() {
           Download CV
         </a>
       </div>
+
+      <p className="text-sm text-zinc-500">
+        <a
+          href="mailto:aidan.james.roche@gmail.com"
+          className="select-all underline underline-offset-4 decoration-zinc-300 hover:text-zinc-900 transition-colors"
+        >
+          aidan.james.roche@gmail.com
+        </a>
+      </p>
     </div>
   </footer>
   </div>
